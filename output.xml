@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.3rc1 on win32)" generated="20220620 20:05:57.484" rpa="false" schemaversion="3">
+<suite id="s1" name="Dropdownlist" source="E:\DemoRobotRF\dropdownlist.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${base_url}</arg>
+<arg>${base_type}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220620 20:05:57.775" level="INFO">Opening browser 'gc' to base url 'https://the-internet.herokuapp.com/dropdown'.</msg>
+<status status="PASS" starttime="20220620 20:05:57.773" endtime="20220620 20:06:18.644"/>
+</kw>
+<test id="s1-t1" name="I selecting &quot;option 2&quot; in dropdown list &quot;menu&quot;" line="13">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220620 20:06:18.647" endtime="20220620 20:06:18.805"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220620 20:06:18.883" level="INFO">Element '//select[@id="dropdown"]' is displayed.</msg>
+<status status="PASS" starttime="20220620 20:06:18.806" endtime="20220620 20:06:18.883"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220620 20:06:18.886" level="INFO">Selecting options from selection list '//select[@id="dropdown"]' by index 2.</msg>
+<status status="PASS" starttime="20220620 20:06:18.885" endtime="20220620 20:06:19.051"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>Option 2</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220620 20:06:19.053" level="INFO">Verifying list '//select[@id="dropdown"]' has option [ Option 2 ] selected.</msg>
+<msg timestamp="20220620 20:06:19.075" level="INFO">Current page contains list '//select[@id="dropdown"]'.</msg>
+<status status="PASS" starttime="20220620 20:06:19.052" endtime="20220620 20:06:19.169"/>
+</kw>
+<status status="PASS" starttime="20220620 20:06:18.644" endtime="20220620 20:06:19.169"/>
+</test>
+<test id="s1-t2" name="I selecting &quot;option 1&quot; in dropdown list &quot;menu&quot;" line="19">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220620 20:06:19.172" endtime="20220620 20:06:19.177"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220620 20:06:19.206" level="INFO">Element '//select[@id="dropdown"]' is displayed.</msg>
+<status status="PASS" starttime="20220620 20:06:19.177" endtime="20220620 20:06:19.206"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220620 20:06:19.208" level="INFO">Selecting options from selection list '//select[@id="dropdown"]' by index 1.</msg>
+<status status="PASS" starttime="20220620 20:06:19.207" endtime="20220620 20:06:19.288"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>Option 1</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220620 20:06:19.290" level="INFO">Verifying list '//select[@id="dropdown"]' has option [ Option 1 ] selected.</msg>
+<msg timestamp="20220620 20:06:19.302" level="INFO">Current page contains list '//select[@id="dropdown"]'.</msg>
+<status status="PASS" starttime="20220620 20:06:19.289" endtime="20220620 20:06:19.379"/>
+</kw>
+<status status="PASS" starttime="20220620 20:06:19.171" endtime="20220620 20:06:19.380"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220620 20:06:19.383" endtime="20220620 20:06:21.804"/>
+</kw>
+<status status="PASS" starttime="20220620 20:05:57.486" endtime="20220620 20:06:21.804"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Dropdownlist">Dropdownlist</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
